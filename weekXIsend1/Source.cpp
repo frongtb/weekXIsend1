@@ -3,6 +3,7 @@
 #include<conio.h>
 #include<windows.h>
 #include<string.h>
+void notchoice();
 int main()
 {
 	char fruit[5][20] = { "apple","banana","cherry","orange","strawberry" };
@@ -14,7 +15,7 @@ int main()
 	scanf("%d", &choice);
 	if (choice < 1 || choice >5 )
 	{
-		printf("Please select choice 1-5 only");
+		notchoice();
 		return 0;
 	}
 	else
@@ -67,4 +68,8 @@ int main()
 	}
 	printf("Congratulation , you win !!!!!\n");
 	_getch();
+}
+void notchoice(void)
+{
+	printf("Please select choice 1-5 only");
 }
